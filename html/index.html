@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/index.js"></script>
+
+        <title>Inspired Codes</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="header__logo">Inspired Codes</a>
+
+            <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+
+            <nav class="nav" id="nav-menu">
+                <div class="nav__content bd-grid">
+                    <a href="" class="nav__perfil">
+                        <div class="nav__img">
+                            <img src="../images/my blog.png" alt="">
+                        </div>
+                        
+                        <div>
+                            <span class="nav__name">Inspired Codes</span>
+                            
+                        </div>
+                    </a>
+    
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+    
+                            <li class="nav__item dropdown">
+                                <a href="#" class="nav__link dropdown__link">HTML & CSS<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                                    
+    
+                                <ul class="dropdown__menu">
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Hover Effects</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Neumorphism</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Glassmorphism</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Navigation Bars</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Social buttons</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">More</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav__item dropdown">
+                                <a href="#" class="nav__link dropdown__link">Javascript<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                                    
+    
+                                <ul class="dropdown__menu">
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Recent jobs</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Better jobs</a></li>
+                                    <li class="dropdown__item"><a href="#" class="nav__link">Work Awards</a></li>
+                                </ul>
+                            <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
+
+                        
+                            </li>
+
+                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                        </ul>
+                    </div>
+                   
+                </div>
+              
+            </nav>
+        </header>
+
+        <script>
+          
+const showMenu = (toggleId, navId)=>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId)
+
+  if(toggle && nav){
+    toggle.addEventListener('click', ()=>{
+      nav.classList.toggle('show')
+      toggle.classList.toggle('bx-x')
+    })
+  }
+}
+showMenu('header-toggle','nav-menu')
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');   
+
+function linkAction(){
+/*Active link*/
+navLink.forEach(n => n.classList.remove('active'));
+this.classList.add('active');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+// navbar ends
+
+ 
+        </script>
+<!--navbar ends here-->
+
+<!--snippets-->
+
+<div class="topic-container"  id="tut1">
+<div class="topic">
+<div class="topic-name">Button hover effect using CSS and Html</div>
+<div class="topic-img"><img src="../images/img1.png" alt=""></div>
+<div class="topic-explaination">
+  Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu
+      <span class="dots">...</span>
+      <span class="more">
+            Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit postea nusquam id.
+      </span>
+      <button class="read">read more</button>
+</div>  
+</div>
+
+
+</div>
+<div class="topic-container" id="tut2">
+  <div class="topic">
+  <div class="topic-name">Button hover effect using CSS3 and Html5</div>
+  <div class="topic-img"><img src="../images/img1.png" alt=""></div>
+  <div class="topic-explaination">
+
+      Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu
+      <span class="dots">...</span>
+      <span class="more">
+            Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit postea nusquam id.
+      </span>
+      <button class="read">read more</button>
+
+  </div>  
+  </div>
+  </div>
+
+<script>
+  $(document).ready(function(){
+   $(".read").click(function(){
+      $(this).prev().toggle();
+      $(this).siblings('.dots').toggle();
+      if($(this).text()=='read more'){
+	$(this).text('read less');
+      }
+      else{
+	$(this).text('read more');
+      }
+   });
+});
+</script>
+
+
+    </body>
+</html>
+
